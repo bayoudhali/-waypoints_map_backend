@@ -4,7 +4,7 @@ export type Waypoint = {
 };
 
 export type Route = {
-  id: number;
+  id: string;
   name: string;
   waypoints: Waypoint[];
 };

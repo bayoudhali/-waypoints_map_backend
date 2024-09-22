@@ -9,7 +9,7 @@ class RouteController {
 
   getRouteById(req: Request, res: Response): void {
     const { id } = req.params;
-    const route = routeService.getRouteById(parseInt(id));
+    const route = routeService.getRouteById(id);
     if (route) {
       res.json(route);
     } else {
@@ -26,7 +26,7 @@ class RouteController {
   updateRoute(req: Request, res: Response): void {
     const { id } = req.params;
     const updatedRoute = req.body;
-    const result = routeService.updateRoute(parseInt(id), updatedRoute);
+    const result = routeService.updateRoute(id, updatedRoute);
     if (result) {
       res.json(result);
     } else {
@@ -36,7 +36,7 @@ class RouteController {
 
   deleteRoute(req: Request, res: Response): void {
     const { id } = req.params;
-    const result = routeService.deleteRoute(parseInt(id));
+    const result = routeService.deleteRoute(id);
     if (result) {
       res.status(204).send();
     } else {

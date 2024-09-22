@@ -2,7 +2,7 @@ import { Route } from "../types/routes.type";
 
 let routes: Route[] = [
   {
-    id: 1,
+    id: "1",
     name: "My First Route",
     waypoints: [
       { lat: 40.4381311, lng: -3.8196196 },
@@ -16,7 +16,7 @@ class RouteService {
     return routes;
   }
 
-  getRouteById(id: number): Route | undefined {
+  getRouteById(id: string): Route | undefined {
     return routes.find((route) => route.id === id);
   }
 
@@ -25,7 +25,7 @@ class RouteService {
     return route;
   }
 
-  updateRoute(id: number, updatedRoute: Partial<Route>): Route | null {
+  updateRoute(id: string, updatedRoute: Partial<Route>): Route | null {
     const routeIndex = routes.findIndex((route) => route.id === id);
     if (routeIndex === -1) return null;
 
@@ -33,7 +33,7 @@ class RouteService {
     return routes[routeIndex];
   }
 
-  deleteRoute(id: number): boolean {
+  deleteRoute(id: string): boolean {
     const routeIndex = routes.findIndex((route) => route.id === id);
     if (routeIndex === -1) return false;
 
