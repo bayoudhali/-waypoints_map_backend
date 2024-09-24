@@ -1,8 +1,8 @@
-# Node.js REST API with TypeScript, Express, and Nodemon
+# Routes WayPoints Node.js REST API with TypeScript, And Express
 
 ## Overview
 
-This project is a REST API built using **Node.js**, **TypeScript**, and **Express**, with a focus on managing routes and waypoints. The API supports CRUD operations (Create, Read, Update, Delete) for "Routes" — objects containing an `id`, `name`, and a list of `waypoints` (latitude and longitude coordinates).
+The Routes WayPoints project is a REST API built using **Node.js**, **TypeScript**, and **Express**, with a focus on managing routes and waypoints. The API supports CRUD operations (Create, Read, Update, Delete) for "Routes" — objects containing an `id`, `name`, and a list of `waypoints` (latitude and longitude coordinates).
 
 ## Features
 
